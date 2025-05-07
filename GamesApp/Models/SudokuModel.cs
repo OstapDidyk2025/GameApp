@@ -73,7 +73,7 @@ namespace GamesApp.Models
                         changesPoint++;
                     }
                 }
-            } while (changesPoint < 30);
+            } while (changesPoint < 60);
 
 
         }
@@ -132,8 +132,10 @@ namespace GamesApp.Models
                 _isRightNumber[x, y] = true;
                 cellColor = Color.Aqua;
             }
-
-            cellColor = Color.White;
+            else
+            {
+                cellColor = Color.White;
+            }
         }
 
 
@@ -150,7 +152,16 @@ namespace GamesApp.Models
         }
 
         public bool CheckWin() 
-        { 
+        {
+            for (int i = 0; i < _boardLevel.GetLength(0); i++)
+            {
+                for (int j = 0; j < _boardLevel.GetLength(1); j++)
+                {
+                    if (_boardLevel[i,j] != _boardStart[i,j] && _isRightNumber[i,j] != true)
+                        return false;
+                }
+            }
+
             return true;
         }
         public void Reset() 

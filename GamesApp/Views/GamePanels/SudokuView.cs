@@ -1,4 +1,5 @@
 ﻿using GamesApp.Controllers;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing.Design;
 
 namespace GamesApp.Views.GamePanels
@@ -26,7 +27,7 @@ namespace GamesApp.Views.GamePanels
                 {
                     Label lbl = new Label();
                     lbl.Size = new System.Drawing.Size(80, 80);
-                    lbl.Location = new System.Drawing.Point(80 * i + 50, 80 * j + 50);
+                    lbl.Location = new System.Drawing.Point(80 * i + 20 + DistanceCalc(i), 80 * j + 20 + DistanceCalc(j));
                     lbl.BorderStyle = BorderStyle.FixedSingle;
                     lbl.BackColor = Color.White;
                     lbl.Font = new System.Drawing.Font("Arial", 25);
@@ -41,9 +42,9 @@ namespace GamesApp.Views.GamePanels
             for (int i = 0; i < 10; i++)
             {
                 Button btn = new Button();
-                btn.Size = new System.Drawing.Size(50, 50);
-                btn.Location = new System.Drawing.Point(850, 50 * i + 100);
-                btn.Font = new System.Drawing.Font("Arial", 20);
+                btn.Size = new System.Drawing.Size(60, 60);
+                btn.Location = new System.Drawing.Point(850, 60 * i + 40);
+                btn.Font = new System.Drawing.Font("Arial", 30);
                 if (i == 0)
                 {
                     btn.Text = " ";
@@ -62,12 +63,28 @@ namespace GamesApp.Views.GamePanels
 
             _btnStart = new Button();
             _btnStart.Size = new System.Drawing.Size(100, 50);
-            _btnStart.Location = new System.Drawing.Point(800, 700);
+            _btnStart.Location = new System.Drawing.Point(825, 700);
             _btnStart.Font = new System.Drawing.Font("Arial", 10);
             _btnStart.Text = "Start";
             _btnStart.TextAlign = ContentAlignment.MiddleCenter;
             _btnStart.Click += (sender, e) => _controller.StartButtonClick();
             this.Controls.Add(_btnStart);
+        }
+
+        private int DistanceCalc(int x)
+        {
+            if (x <= 2)
+            { 
+                return 0;
+            }
+            else if (2 < x && x<= 5)
+            {
+                return 10;
+            }
+            else
+            {
+                return 20;
+            }
         }
 
         public void UpdateLabel(int x, int y, string number, Color color)
@@ -111,6 +128,7 @@ namespace GamesApp.Views.GamePanels
             { 
                 lbl.Text = string.Empty;
                 lbl.BackColor = Color.White;
+                lbl.Enabled = true;
             }
         }
 

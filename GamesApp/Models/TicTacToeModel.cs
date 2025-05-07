@@ -3,146 +3,111 @@ namespace GamesApp.Models
 {
     internal class TicTacToeModel : IGameModel, IpvcMode
     {
-        private string[,] board = new string[3, 3];
+        private string[,] _board = new string[3, 3];
         public string CurrentPlayer { get; private set; } = "X";
         public Color BoardColor { get; private set; } = Color.Blue;
+
+        List<(int, int)[]> winningLines = new List<(int, int)[]>
+        {
+        new[] { (0,0), (0,1), (0,2) },
+        new[] { (1,0), (1,1), (1,2) },
+        new[] { (2,0), (2,1), (2,2) },
+        new[] { (0,0), (1,0), (2,0) },
+        new[] { (0,1), (1,1), (2,1) },
+        new[] { (0,2), (1,2), (2,2) },
+        new[] { (0,0), (1,1), (2,2) },
+        new[] { (0,2), (1,1), (2,0) },
+        };
 
         public bool MakeMove(int x, int y, out Color color)
         {
             color = BoardColor;
-            if (board[x, y] != " ") return false;
-            board[x, y] = CurrentPlayer;
+            if (_board[x, y] != " ") return false;
+            _board[x, y] = CurrentPlayer;
             return true;
         }
 
         public bool ComputerMove(out int a, out int b, out Color botColor)
         {
+            string opponent = (CurrentPlayer == "X") ? "O" : "X";
+            bool CheckMove = false;
+            a = 0; b = 0;
 
-            for (int i = 0; i < 3; i++)
+            foreach (var line in winningLines)
             {
-                if ((board[i, 0] == CurrentPlayer) && (board[i, 1] == CurrentPlayer) && (board[i, 2] == " "))
+                var texts = line.Select(pos => _board[pos.Item1, pos.Item2]).ToArray();
+                if (texts.Count(t => t == CurrentPlayer) == 2 && texts.Count(t => t == " ") == 1)
                 {
+                    var empty = line.First(pos => _board[pos.Item1, pos.Item2] == " ");
                     botColor = BoardColor;
-                    return MakeMove(a = i, b = 2, out var color);
-                }
-                else if ((board[i, 0] == CurrentPlayer) && (board[i, 1] == " ") && (board[i, 2] == CurrentPlayer))
-                {
-                    botColor = BoardColor;
-                    return MakeMove(a = i, b = 1, out var color);
-                }
-                else if ((board[i, 0] == " ") && (board[i, 1] == CurrentPlayer) && (board[i, 2] == CurrentPlayer))
-                {
-                    botColor = BoardColor;
-                    return MakeMove(a = i, b = 0, out var color);
-                }
-            }
-            for (int i = 0; i < 3; i++)
-            {
-                if ((board[0, i] == CurrentPlayer) && (board[1, i] == CurrentPlayer) && (board[2, i] == " "))
-                {
-                    botColor = BoardColor;
-                    return MakeMove(a = 2, b = i, out var color);
-                }
-                else if ((board[0, i] == CurrentPlayer) && (board[1, i] == " ") && (board[2, i] == CurrentPlayer))
-                {
-                    botColor = BoardColor;
-                    return MakeMove(a = 1, b = i, out var color);
-                }
-                else if ((board[0, i] == " ") && (board[1, i] == CurrentPlayer) && (board[2, i] == CurrentPlayer))
-                {
-                    botColor = BoardColor;
-                    return MakeMove(a = 0,b = i, out var color);
+                    CheckMove = MakeMove(a = empty.Item1, b = empty.Item2, out var color);
+                    return CheckMove;
                 }
             }
 
-            if (board[0, 0] == CurrentPlayer && board[1, 1] == CurrentPlayer && board[2, 2] == " ")
+            foreach (var line in winningLines)
             {
+                var texts = line.Select(pos => _board[pos.Item1, pos.Item2]).ToArray();
+                if (texts.Count(t => t == opponent) == 2 && texts.Count(t => t == " ") == 1)
+                {
+                    var empty = line.First(pos => _board[pos.Item1, pos.Item2] == " ");
+                    botColor = BoardColor;
+                    CheckMove = MakeMove(a = empty.Item1, b = empty.Item2, out var color);
+                    return CheckMove;
+                }
+            }
+
+            if (_board[1, 1] == " ")
+            {
+                a = 1; b = 1;
                 botColor = BoardColor;
-                return MakeMove(a = 2, b = 2, out var color);
-            }
-            if (board[2, 0] == CurrentPlayer && board[1, 1] == CurrentPlayer && board[0, 2] == " ")
-            {
-                botColor = BoardColor;
-                return MakeMove(a = 0, b = 2, out var color);
-            }
-            if ((board[0, 0] == CurrentPlayer && board[1, 1] == " " && board[2, 2] == CurrentPlayer) ||
-                (board[2, 0] == CurrentPlayer && board[1, 1] == " " && board[0, 2] == CurrentPlayer))
-            {
-                botColor = BoardColor;
-                return MakeMove(a = 1, b = 1, out var color);
-            }
-            if (board[0, 0] == " " && board[1, 1] == CurrentPlayer && board[2, 2] == CurrentPlayer)
-            {
-                botColor = BoardColor;
-                return MakeMove(a = 0, b = 0, out var color);
-            }
-            if (board[2, 0] == " " && board[1, 1] == CurrentPlayer && board[0, 2] == CurrentPlayer)
-            {
-                botColor = BoardColor;
-                return MakeMove(a = 2, b = 0, out var color);
+                CheckMove = MakeMove(a, b, out var color);
+                return CheckMove;
             }
 
-
-            if (board[1, 1] == " ")
+            foreach (var (i, j) in new[] { (0, 0), (0, 2), (2, 0), (2, 2) })
             {
-                botColor = BoardColor;
-                return MakeMove(a = 1, b = 1, out var color);
-            }
-
-            for (int i = 0; i < 3; i += 2)
-            {
-                for (int j = 0; j < 3; j += 2)
+                if (_board[i, j] == " ")
                 {
-                    if (board[i, j] == " ")
-                    {
-                        botColor = BoardColor;
-                        return MakeMove(a = i, b = j, out var color);
-                    }
-                }
-            }
-
-            for (int j = 0; j < 3; j += 2)
-            {
-                if (board[1, j] == " ")
-                {
+                    a = i; b = j;
                     botColor = BoardColor;
-                    return MakeMove(a = 1, b = j, out var color);
+                    CheckMove = MakeMove(a, b, out var color);
+                    return CheckMove;
                 }
             }
 
-            for (int i = 0; i < 3; i += 2)
+            foreach (var (i, j) in new[] { (1, 0), (0, 1), (2, 1), (1, 2) })
             {
-                if (board[i, 1] == " ")
+                if (_board[i, j] == " ")
                 {
+                    a = i; b = j;
                     botColor = BoardColor;
-                    return MakeMove(a = i, b = 1, out var color);
+                    CheckMove = MakeMove(i, j, out var color);
+                    return CheckMove;
                 }
             }
 
-            a = 0;
-            b = 0;
             botColor = BoardColor;
             return false;
-
         }
 
         public bool CheckWin()
         {
             for (int i = 0; i < 3; i++)
-                if (board[i, 0] == CurrentPlayer && board[i, 1] == CurrentPlayer && board[i, 2] == CurrentPlayer) return true;
+                if (_board[i, 0] == CurrentPlayer && _board[i, 1] == CurrentPlayer && _board[i, 2] == CurrentPlayer) return true;
 
             for (int j = 0; j < 3; j++)
-                if (board[0, j] == CurrentPlayer && board[1, j] == CurrentPlayer && board[2, j] == CurrentPlayer) return true;
+                if (_board[0, j] == CurrentPlayer && _board[1, j] == CurrentPlayer && _board[2, j] == CurrentPlayer) return true;
 
-            if (board[0, 0] == CurrentPlayer && board[1, 1] == CurrentPlayer && board[2, 2] == CurrentPlayer) return true;
-            if (board[0, 2] == CurrentPlayer && board[1, 1] == CurrentPlayer && board[2, 0] == CurrentPlayer) return true;
+            if (_board[0, 0] == CurrentPlayer && _board[1, 1] == CurrentPlayer && _board[2, 2] == CurrentPlayer) return true;
+            if (_board[0, 2] == CurrentPlayer && _board[1, 1] == CurrentPlayer && _board[2, 0] == CurrentPlayer) return true;
 
             return false;
         }
 
         public bool IsDraw()
         {
-            foreach (var cell in board)
+            foreach (var cell in _board)
                 if (cell == " ") return false;
             return true;
         }
@@ -155,12 +120,12 @@ namespace GamesApp.Models
 
         public void Reset()
         {
-            board = new string[3, 3];
+            _board = new string[3, 3];
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
                 {
-                    board[i, j] = " ";
+                    _board[i, j] = " ";
                 }
             }
             CurrentPlayer = "X";

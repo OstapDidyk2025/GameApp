@@ -4,13 +4,13 @@ namespace GamesApp.Views.GamePanels
 {
     partial class TicTacToePanel : Form, IGameView
     {
-        private TicTacToeController controller;
-        private Label[,] labels = new Label[3, 3];
+        private TicTacToeController _controller;
+        private Label[,] _labels = new Label[3, 3];
 
         public TicTacToePanel(bool isComputer)
         {
             InitializeComponent();
-            controller = new TicTacToeController(this, isComputer);
+            _controller = new TicTacToeController(this, isComputer);
             InitializeGrid();
         }
 
@@ -28,8 +28,8 @@ namespace GamesApp.Views.GamePanels
                     lbl.BorderStyle = BorderStyle.FixedSingle;
                     lbl.TextAlign = ContentAlignment.MiddleCenter;
                     int x = i; int y = j;
-                    lbl.Click += (sender, e) => controller.HandleClick(x, y);
-                    labels[i, j] = lbl;
+                    lbl.Click += (sender, e) => _controller.HandleClick(x, y);
+                    _labels[i, j] = lbl;
                     this.Controls.Add(lbl);
                 }
             }
@@ -37,9 +37,9 @@ namespace GamesApp.Views.GamePanels
 
         public void UpdateLabel(int x, int y, string text, Color color)
         {
-            labels[x, y].BackColor = color;
-            labels[x, y].Text = text;
-            labels[x, y].Enabled = false;
+            _labels[x, y].BackColor = color;
+            _labels[x, y].Text = text;
+            _labels[x, y].Enabled = false;
         }
 
         public void ShowMessage(string message)
@@ -53,9 +53,9 @@ namespace GamesApp.Views.GamePanels
             for (int i = 0; i < 3; i++)
                 for (int j = 0; j < 3; j++)
                 {
-                    labels[i, j].Text = " ";
-                    labels[i, j].Enabled = true;
-                    labels[i, j].BackColor = Color.White;
+                    _labels[i, j].Text = " ";
+                    _labels[i, j].Enabled = true;
+                    _labels[i, j].BackColor = Color.White;
                 }
         }
 

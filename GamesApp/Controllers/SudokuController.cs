@@ -28,6 +28,11 @@ namespace GamesApp.Controllers
             if (_model.MakeMove(x, y, out Color color))
             {
                 _view.UpdateLabel(x, y, _model.chosenNumber, color);
+                if (_model.CheckWin())
+                {
+                    _view.ShowMessage("Вітаю з перемогою!");
+                }
+
             }
         }
 

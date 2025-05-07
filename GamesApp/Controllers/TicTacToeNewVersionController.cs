@@ -7,50 +7,52 @@ namespace GamesApp.Controllers
 {
     internal class TicTacToeNewVersionController : IGameController
     {
-        private TicTacToeNewVersionModel model;
-        private TicTacToeNewVersionView view;
-        private bool isComputer = false;
+        private TicTacToeNewVersionModel _model;
+        private TicTacToeNewVersionView _view;
+        private bool _isComputer = false;
         public TicTacToeNewVersionController(TicTacToeNewVersionView view, bool IsComputer)
         {
-            this.view = view;
-            model = new TicTacToeNewVersionModel();
-            isComputer = IsComputer;
-            model.Reset();
+            this._view = view;
+            _model = new TicTacToeNewVersionModel();
+            _isComputer = IsComputer;
+            _model.Reset();
         }
 
         public void HandleClick(int x, int y)
         {
-            if (model.MakeMove(x, y, out var color))
+            if (_model.MakeMove(x, y, out var color))
             {
-                view.UpdateLabel(x, y, model.CurrentPlayer, color);
-                view.ReenableLabel(model.board);
-                model.ChangeCellsTextRemaind();
-                if (model.CheckWin())
+                _view.UpdateLabel(x, y, _model.CurrentPlayer, color);
+                _view.ReenableLabel(_model.board);
+                _model.ChangeCellsTextRemaind();
+                if (_model.CheckWin())
                 {
-                    view.ShowMessage($"Гравець {model.CurrentPlayer} виграв!");
-                    model.Reset();
-                    view.ResetGrid();
+                    _view.ShowMessage($"Гравець {_model.CurrentPlayer} виграв!");
+                    _model.Reset();
+                    _view.ResetGrid();
                     return;
                 }
-                model.SwitchPlayer();
-            }
-            if (isComputer == true)
-            {
-                if (model.ComputerMove(out int a, out int b, out Color botColor))
+                _model.SwitchPlayer();
+
+                if (_isComputer == true)
                 {
-                    view.UpdateLabel(a, b, model.CurrentPlayer, botColor);
-                    view.ReenableLabel(model.board);
-                    model.ChangeCellsTextRemaind();
-                    if (model.CheckWin())
+                    if (_model.ComputerMove(out int a, out int b, out Color botColor))
                     {
-                        view.ShowMessage($"Гравець {model.CurrentPlayer} виграв!");
-                        model.Reset();
-                        view.ResetGrid();
-                        return;
+                        _view.UpdateLabel(a, b, _model.CurrentPlayer, botColor);
+                        _view.ReenableLabel(_model.board);
+                        _model.ChangeCellsTextRemaind();
+                        if (_model.CheckWin())
+                        {
+                            _view.ShowMessage($"Комп'ютер виграв!");
+                            _model.Reset();
+                            _view.ResetGrid();
+                            return;
+                        }
+                        _model.SwitchPlayer();
                     }
-                    model.SwitchPlayer();
                 }
             }
+            
         }
     }
 }

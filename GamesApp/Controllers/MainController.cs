@@ -9,29 +9,29 @@ namespace GamesApp.Controllers
 {
     internal class MainController
     {
-        private MainMenuView view;
-        private MainModel model;
-        private bool isComputer;
-        private int gameChosen;
+        private MainMenuView _view;
+        private MainModel _model;
+        private bool _isComputer;
+        private int _gameChosen;
 
         public MainController(MainMenuView view)
         { 
-            this.view = view;
-            model = new MainModel();
-            isComputer = true;
-            gameChosen = 0;
+            this._view = view;
+            _model = new MainModel();
+            _isComputer = true;
+            _gameChosen = 0;
         }
 
         public void RadioButton_CheckedChange()
         {
-            var result = view.GameChosenChecked();
-            gameChosen = result.Item1;
-            isComputer = result.Item2;
+            var result = _view.GameChosenChecked();
+            _gameChosen = result.Item1;
+            _isComputer = result.Item2;
         }
 
         public void HandleClik()
         {
-            model.StartGame(gameChosen, isComputer);
+            _model.StartGame(_gameChosen, _isComputer);
         }
     }
 }

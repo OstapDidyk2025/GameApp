@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|d:\\\u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0432\u0447\u0443 \u0441#\\\u043F\u0440\u043E\u0435\u043A\u0442\u0438\\tic-tac-toe\\gamesapp\\gamesapp\\models\\tictactoemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\models\\tictactoemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|d:\\\u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0432\u0447\u0443 \u0441#\\\u043F\u0440\u043E\u0435\u043A\u0442\u0438\\tic-tac-toe\\gamesapp\\gamesapp\\models\\tictactoenewversionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\models\\tictactoenewversionmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\gamesapp\\models\\sudokumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\models\\sudokumodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|d:\\\u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0432\u0447\u0443 \u0441#\\\u043F\u0440\u043E\u0435\u043A\u0442\u0438\\tic-tac-toe\\gamesapp\\gamesapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\gamesapp\\views\\gamepanels\\sudokuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\views\\gamepanels\\sudokuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\gamesapp\\controllers\\sudokucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\controllers\\sudokucontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 344,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,52 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SudokuView.cs",
-              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Views\\GamePanels\\SudokuView.cs",
-              "RelativeDocumentMoniker": "GamesApp\\Views\\GamePanels\\SudokuView.cs",
-              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Views\\GamePanels\\SudokuView.cs",
-              "RelativeToolTip": "GamesApp\\Views\\GamePanels\\SudokuView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T13:11:10.901Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SudokuController.cs",
-              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Controllers\\SudokuController.cs",
-              "RelativeDocumentMoniker": "GamesApp\\Controllers\\SudokuController.cs",
-              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Controllers\\SudokuController.cs",
-              "RelativeToolTip": "GamesApp\\Controllers\\SudokuController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAABMAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T13:10:15.03Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SudokuModel.cs",
-              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\SudokuModel.cs",
-              "RelativeDocumentMoniker": "GamesApp\\Models\\SudokuModel.cs",
-              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\SudokuModel.cs",
-              "RelativeToolTip": "GamesApp\\Models\\SudokuModel.cs",
-              "ViewState": "AQIAAG4AAAAAAAAAAAAwwIMAAAAsAAAA",
+              "Title": "TicTacToeModel.cs",
+              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\TicTacToeModel.cs",
+              "RelativeDocumentMoniker": "GamesApp\\Models\\TicTacToeModel.cs",
+              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\TicTacToeModel.cs",
+              "RelativeToolTip": "GamesApp\\Models\\TicTacToeModel.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAkwEEAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-28T12:49:21.968Z",
+              "WhenOpened": "2025-05-07T09:55:28.313Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Program.cs",
-              "RelativeDocumentMoniker": "GamesApp\\Program.cs",
-              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Program.cs",
-              "RelativeToolTip": "GamesApp\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAA5AAAA",
+              "Title": "TicTacToeNewVersionModel.cs",
+              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\TicTacToeNewVersionModel.cs",
+              "RelativeDocumentMoniker": "GamesApp\\Models\\TicTacToeNewVersionModel.cs",
+              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\TicTacToeNewVersionModel.cs",
+              "RelativeToolTip": "GamesApp\\Models\\TicTacToeNewVersionModel.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAAwF4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T12:20:06.01Z",
+              "WhenOpened": "2025-05-07T09:11:01.311Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SudokuModel.cs",
+              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\SudokuModel.cs",
+              "RelativeDocumentMoniker": "GamesApp\\Models\\SudokuModel.cs",
+              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\SudokuModel.cs",
+              "RelativeToolTip": "GamesApp\\Models\\SudokuModel.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAAAEgAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-06T14:35:28.261Z",
               "EditorCaption": ""
             }
           ]
