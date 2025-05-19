@@ -33,5 +33,12 @@ namespace GamesApp.Controllers
         {
             _model.StartGame(_gameChosen, _isComputer);
         }
+
+        public void ShowRules(int ruleIndex)
+        {
+            var texts = _model.GetRulesFor(ruleIndex);
+
+            _view.GenerateRuleForm(texts.Item1, texts.Item2);
+        }
     }
 }

@@ -29,5 +29,26 @@ namespace GamesApp.Models
                     break;
             }
         }
+
+        public (string, string)  GetRulesFor(int ruleIndex)
+        {
+            string[] names = { "Terni Lapili", "TicTacToe", "Sudoku", "Minesweeper"};
+            string[] fileNames = {"TicTacToe2.txt", "TicTacToe.txt", "Sudoku.txt", "Minesweeper.txt"};
+
+            string rules = string.Empty;
+
+            try
+            {
+                StreamReader reader = new StreamReader(fileNames[ruleIndex]);
+                rules = reader.ReadToEnd();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show("Вітаю, ви бляха щось поламали :)");
+            }
+
+            return ((ruleIndex >= 0 && ruleIndex < names.Length) ? names[ruleIndex] : "Правила не знайдено.", rules);
+        }
+
     }
 }

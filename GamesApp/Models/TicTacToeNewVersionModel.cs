@@ -2,7 +2,7 @@
 {
     internal class TicTacToeNewVersionModel : IGameModel, IpvcMode
     {
-        public Color BackColor { get; set; } = Color.FromArgb(0, 0, 192);
+        public Color BackColor { get; set; } = Color.DodgerBlue;
         public CellInfo[,] board = new CellInfo[3, 3];
         public string CurrentPlayer { get; private set; } = "X";
 
@@ -128,7 +128,7 @@
 
         public void SwitchPlayer()
         { 
-            BackColor = (CurrentPlayer == "X")? Color.FromArgb(192, 0, 0) : Color.FromArgb(0, 0, 192);
+            BackColor = (CurrentPlayer == "X")? Color.DodgerBlue : Color.OrangeRed;
             CurrentPlayer = (CurrentPlayer == "X") ? "O" : "X";
         }
 
@@ -144,7 +144,7 @@
                 }
             }
             CurrentPlayer = "X";
-            BackColor = Color.FromArgb(0, 0, 192);
+            BackColor = Color.OrangeRed;
         }
 
     }

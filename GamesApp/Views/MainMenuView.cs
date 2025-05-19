@@ -8,79 +8,110 @@ namespace GamesApp
         private RadioButton[] _radioButtons = new RadioButton[6];
         private Panel _panelGameMode;
         private Button _startButton;
+        private Button[] _ruleButtons = new Button[4];
         public MainMenuView()
         {
             InitializeComponent();
             _controller = new MainController(this);
             _panelGameMode = new Panel();
             _startButton = new Button();
-            InitailizeGrid();
+            InitializeGrid();
         }
 
-        public void InitailizeGrid()
+        public void InitializeGrid()
         {
-            RadioButton ticNevVersion = new RadioButton();
-            ticNevVersion.Text = "TicTacToe3chips";
-            ticNevVersion.Checked = false;
-            ticNevVersion.Location = new System.Drawing.Point(100, 50);
-            this.Controls.Add(ticNevVersion);
-            _radioButtons[0] = ticNevVersion;
-
-            RadioButton ticTcToe = new RadioButton();
-            ticTcToe.Text = "TicTacToe";
-            ticTcToe.Checked = false;
-            ticTcToe.Location = new System.Drawing.Point(100, 100);
-            this.Controls.Add(ticTcToe);
-            _radioButtons[1] = ticTcToe;
-
-            RadioButton sudoku = new RadioButton();
-            sudoku.Text = "Sudoku";
-            sudoku.Checked = false;
-            sudoku.Location = new System.Drawing.Point(100, 150);
-            this.Controls.Add(sudoku);
-            _radioButtons[2] = sudoku;
-
-            RadioButton mineswepper = new RadioButton();
-            mineswepper.Text = "Mineswepper";
-            mineswepper.Checked = false;
-            mineswepper.Location = new System.Drawing.Point(100, 200);
-            this.Controls.Add(mineswepper);
-            _radioButtons[3] = mineswepper;
-
-            RadioButton pvpMode = new RadioButton();
-            pvpMode.Text = "PVP";
-            pvpMode.Checked = false;
-            pvpMode.Location = new System.Drawing.Point(5, 0);
-            _radioButtons[4] = pvpMode;
-
-            RadioButton pvcMode = new RadioButton();
-            pvcMode.Text = "Computer";
-            pvcMode.Checked = false;
-            pvcMode.Location = new System.Drawing.Point(5, 50);
-            _radioButtons[5] = pvcMode;
-
-            _panelGameMode.Size = new System.Drawing.Size(100, 70);
-            _panelGameMode.Location = new System.Drawing.Point(300, 50);
-            _panelGameMode.Enabled = false;
-            _panelGameMode.Controls.Add(pvcMode);
-            _panelGameMode.Controls.Add(pvpMode);
-            _panelGameMode.Visible = false;
-            this.Controls.Add(_panelGameMode);
-
-            _startButton.Location = new System.Drawing.Point(100, 250);
-            _startButton.Enabled = false;
-            _startButton.Text = "Start";
-            _startButton.TextAlign = ContentAlignment.MiddleCenter;
-            _startButton.Size = new System.Drawing.Size(100, 40);
-            this.Controls.Add(_startButton);
-
-            _startButton.Click += (sender, e) => _controller.HandleClik();
+            this.ClientSize = new System.Drawing.Size(800, 350);
+            this.BackColor = Color.Gainsboro;
+            string[] names = { "Terni Lapili", "TicTacToe", "Sudoku", "Mineswepper", "PVP", "Computer"};
 
             for (int i = 0; i < _radioButtons.Length; i++)
             {
+                if (i < 4)
+                {
+                    RadioButton rbtn = new RadioButton();
+                    rbtn.AutoSize = true;
+                    rbtn.Text = names[i];
+                    rbtn.Font = new System.Drawing.Font("Arial", 15);
+                    rbtn.Checked = false;
+                    rbtn.Location = new System.Drawing.Point(145, 50 + (70 * i));
+                    this.Controls.Add(rbtn);
+                    _radioButtons[i] = rbtn;
+                }
+                else 
+                {
+                    RadioButton rbtn = new RadioButton();
+                    rbtn.AutoSize = true;
+                    rbtn.Text = names[i];
+                    rbtn.Font = new System.Drawing.Font("Arial", 15);
+                    rbtn.Checked = false;
+                    rbtn.Location = new System.Drawing.Point(5, 70 * (i/5));
+                    this.Controls.Add(rbtn);
+                    _radioButtons[i] = rbtn;
+                }
+
                 _radioButtons[i].Click += (sender, e) => _controller.RadioButton_CheckedChange();
             }
+
+            for (int i = 0; i < _ruleButtons.Length; i++ )
+            { 
+                Button button = new Button();
+                button.Text = "?";
+                button.Font = new System.Drawing.Font("Arial", 20);
+                button.Location = new System.Drawing.Point(80, 45 + (70 * i));
+                button.BackColor = Color.Goldenrod;
+                button.TextAlign = ContentAlignment.MiddleCenter;
+                button.Size = new System.Drawing.Size(40, 40);
+                this.Controls.Add(button);
+                int index = i;
+                button.Click += (sender, e) => _controller.ShowRules(index);
+            }
+
+            _panelGameMode.Size = new System.Drawing.Size(200, 100);
+            _panelGameMode.Location = new System.Drawing.Point(450, 50);
+            _panelGameMode.Enabled = false;
+            _panelGameMode.Controls.Add(_radioButtons[4]);
+            _panelGameMode.Controls.Add(_radioButtons[5]);
+            _panelGameMode.Visible = false;
+            this.Controls.Add(_panelGameMode);
+
+            _startButton.Location = new System.Drawing.Point(450, 250);
+            _startButton.Enabled = false;
+            _startButton.Font = new System.Drawing.Font("Arial", 15);
+            _startButton.Text = "Start";
+            _startButton.BackColor = Color.Goldenrod;
+            _startButton.TextAlign = ContentAlignment.MiddleCenter;
+            _startButton.Size = new System.Drawing.Size(150, 60);
+            this.Controls.Add(_startButton);
+
+            _startButton.Click += (sender, e) => _controller.HandleClik();
         }
+
+        public void GenerateRuleForm(string name, string rules)
+        {
+            Form ruleFrom = new Form(); 
+            ruleFrom.Size = new System.Drawing.Size(800, 650);
+            ruleFrom.BackColor = Color.Gainsboro;
+            ruleFrom.Text = name;
+
+            TextBox textBox = new TextBox();
+            textBox.Size = new System.Drawing.Size(700, 500);
+            textBox.ScrollBars = ScrollBars.Horizontal;
+            textBox.Location = new System.Drawing.Point(50, 10);
+            textBox.Font = new System.Drawing.Font("Arial", 15);
+            textBox.Text = rules;
+            textBox.ReadOnly = true;
+            textBox.Multiline = true;
+            textBox.ScrollBars = ScrollBars.Vertical;
+            ruleFrom.Controls.Add(textBox);
+
+
+
+
+
+            ruleFrom.ShowDialog();
+        }
+
+
 
         public (int, bool) GameChosenChecked()
         {

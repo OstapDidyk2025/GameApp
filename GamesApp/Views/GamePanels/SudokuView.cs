@@ -10,6 +10,8 @@ namespace GamesApp.Views.GamePanels
         private Label[,] _labels = new Label[9, 9];
         private Button[] _buttons = new Button[10];
         private Button _btnStart = new Button();
+        private Label _labelOfMistakes = new Label();
+        private Label _timerLabel = new Label();
 
         public SudokuView()
         {
@@ -21,6 +23,7 @@ namespace GamesApp.Views.GamePanels
         public void InitializeGrid()
         {
             this.ClientSize = new System.Drawing.Size(1000, 800);
+            this.BackColor = Color.Gainsboro;
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)
@@ -42,8 +45,8 @@ namespace GamesApp.Views.GamePanels
             for (int i = 0; i < 10; i++)
             {
                 Button btn = new Button();
-                btn.Size = new System.Drawing.Size(60, 60);
-                btn.Location = new System.Drawing.Point(850, 60 * i + 40);
+                btn.Size = new System.Drawing.Size(70, 70);
+                btn.Location = new System.Drawing.Point(800 + (i/5 * 70), 70 * i + 100 - (i/5 * 350));
                 btn.Font = new System.Drawing.Font("Arial", 30);
                 if (i == 0)
                 {
@@ -54,6 +57,7 @@ namespace GamesApp.Views.GamePanels
                     btn.Text = i.ToString();
                 }
                 btn.TextAlign = ContentAlignment.MiddleCenter;
+                btn.BackColor = Color.AntiqueWhite;
                 int x = i;
                 btn.Click += (sender, e) => _controller.ButtonClick(x);
                 _buttons[i] = btn;
@@ -62,39 +66,90 @@ namespace GamesApp.Views.GamePanels
             }
 
             _btnStart = new Button();
-            _btnStart.Size = new System.Drawing.Size(100, 50);
-            _btnStart.Location = new System.Drawing.Point(825, 700);
+            _btnStart.Size = new System.Drawing.Size(140, 50);
+            _btnStart.Location = new System.Drawing.Point(800, 710);
             _btnStart.Font = new System.Drawing.Font("Arial", 10);
             _btnStart.Text = "Start";
+            _btnStart.BackColor = Color.Goldenrod;
             _btnStart.TextAlign = ContentAlignment.MiddleCenter;
             _btnStart.Click += (sender, e) => _controller.StartButtonClick();
             this.Controls.Add(_btnStart);
+
+            _labelOfMistakes = new Label();
+            _labelOfMistakes.Size = new System.Drawing.Size(140, 50);
+            _labelOfMistakes.Location = new System.Drawing.Point(800, 650);
+            _labelOfMistakes.Font = new System.Drawing.Font("Arial", 10);
+            _labelOfMistakes.Text = $"Mistakes:{Environment.NewLine} 0 / 5";
+            _labelOfMistakes.BackColor = Color.AntiqueWhite;
+            _labelOfMistakes.TextAlign = ContentAlignment.MiddleCenter;
+            this.Controls.Add( _labelOfMistakes );
+
+            _timerLabel = new Label();
+            _timerLabel.Size = new System.Drawing.Size(140, 50);
+            _timerLabel.Location = new System.Drawing.Point(800, 590);
+            _timerLabel.Font = new System.Drawing.Font("Arial", 10);
+            _timerLabel.Text = "00:00";
+            _timerLabel.BackColor = Color.AntiqueWhite;
+            _timerLabel.TextAlign = ContentAlignment.MiddleCenter;
+            this.Controls.Add(_timerLabel);
+
         }
 
         private int DistanceCalc(int x)
         {
-            if (x <= 2)
-            { 
-                return 0;
-            }
-            else if (2 < x && x<= 5)
+            return x / 3 * 10;
+        }
+
+        public void HightlightCells(int numberOfButton)
+        {
+            foreach (Label lbl in _labels)
             {
-                return 10;
+                if (lbl.Text == numberOfButton.ToString() && lbl.BackColor == Color.LightGreen)
+                {
+                    lbl.BackColor = Color.Khaki;
+                }
             }
+        }
+
+        public void DisHightlightCells()
+        {
+            foreach (Label lbl in _labels)
+            {
+                if (lbl.BackColor == Color.Khaki)
+                {
+                    lbl.BackColor = Color.LightGreen;
+                }
+            }
+        }
+
+        public void UpdateTimer(string time)
+        {
+            if (InvokeRequired)
+                Invoke(() => _timerLabel.Text = time);
             else
-            {
-                return 20;
-            }
+                _timerLabel.Text = time;
         }
 
         public void UpdateLabel(int x, int y, string number, Color color)
         {
-            _labels[x, y].Text = number;
+            if (number == "0")
+            {
+                _labels[x, y].Text = " ";
+            }
+            else
+            {
+                _labels[x, y].Text = number;
+            }
             _labels[x, y].BackColor = color;
-            if (color == Color.Aqua)
+            if (color == Color.LightGreen)
             {
                 _labels[x,y].Enabled = false;
             }
+        }
+
+        public void ShowNumberOfMistakes(int mistakes)
+        { 
+            _labelOfMistakes.Text = $"Mistakes:{Environment.NewLine}{mistakes} / 5";
         }
 
         public void ShowMessage(string message)
@@ -116,10 +171,11 @@ namespace GamesApp.Views.GamePanels
                     {
                         _labels[i, j].Text = board[i, j].ToString();
                         _labels[i, j].Enabled = false;
-                        _labels[i, j].BackColor = Color.Aqua;
+                        _labels[i, j].BackColor = Color.LightGreen;
                     }
                 }
             }
+            ShowNumberOfMistakes(0);
         }
 
         public void ResetGrid()

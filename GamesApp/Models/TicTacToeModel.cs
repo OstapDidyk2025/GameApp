@@ -5,7 +5,7 @@ namespace GamesApp.Models
     {
         private string[,] _board = new string[3, 3];
         public string CurrentPlayer { get; private set; } = "X";
-        public Color BoardColor { get; private set; } = Color.Blue;
+        public Color BoardColor { get; private set; } = Color.DodgerBlue;
 
         List<(int, int)[]> winningLines = new List<(int, int)[]>
         {
@@ -114,7 +114,7 @@ namespace GamesApp.Models
 
         public void SwitchPlayer()
         {
-            BoardColor = (CurrentPlayer == "X") ? Color.FromArgb(192, 0, 0) : Color.FromArgb(0, 0, 192);
+            BoardColor = (CurrentPlayer == "X") ? Color.DodgerBlue : Color.OrangeRed;
             CurrentPlayer = (CurrentPlayer == "X") ? "O" : "X";
         }
 
@@ -129,7 +129,7 @@ namespace GamesApp.Models
                 }
             }
             CurrentPlayer = "X";
-            BoardColor = Color.FromArgb(0, 0, 192);
+            BoardColor = Color.OrangeRed;
         }
     }
 }
