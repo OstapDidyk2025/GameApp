@@ -22,6 +22,7 @@ namespace GamesApp
         {
             this.ClientSize = new System.Drawing.Size(800, 350);
             this.BackColor = Color.Gainsboro;
+            this.Text = "Головне меню";
             string[] names = { "Terni Lapili", "TicTacToe", "Sudoku", "Mineswepper", "PVP", "Computer"};
 
             for (int i = 0; i < _radioButtons.Length; i++)

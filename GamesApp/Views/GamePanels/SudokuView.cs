@@ -24,6 +24,7 @@ namespace GamesApp.Views.GamePanels
         {
             this.ClientSize = new System.Drawing.Size(1000, 800);
             this.BackColor = Color.Gainsboro;
+            this.Text = "Судоку";
             for (int i = 0; i < 9; i++)
             {
                 for (int j = 0; j < 9; j++)

@@ -11,6 +11,8 @@ namespace GamesApp.Models
 
         private SudokuView _sudokuView;
 
+        private MineSweeperView _mineSweeperView;
+
         public void StartGame(int gameNumber, bool isPlayer)
         {
             switch (gameNumber)
@@ -26,6 +28,10 @@ namespace GamesApp.Models
                 case 2:
                     _sudokuView = new SudokuView();
                     _sudokuView.ShowDialog();
+                    break;
+                case 3:
+                    _mineSweeperView = new MineSweeperView();
+                    _mineSweeperView.ShowDialog();
                     break;
             }
         }
@@ -44,7 +50,7 @@ namespace GamesApp.Models
             }
             catch (Exception ex) 
             {
-                MessageBox.Show("Вітаю, ви бляха щось поламали :)");
+                MessageBox.Show($"Вітаю, ви бляха щось поламали :) {Environment.NewLine} {ex}");
             }
 
             return ((ruleIndex >= 0 && ruleIndex < names.Length) ? names[ruleIndex] : "Правила не знайдено.", rules);

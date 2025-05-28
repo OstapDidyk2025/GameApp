@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\gamesapp\\models\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\models\\mainmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|d:\\\u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0432\u0447\u0443 \u0441#\\\u043F\u0440\u043E\u0435\u043A\u0442\u0438\\tic-tac-toe\\gamesapp\\gamesapp\\views\\gamepanels\\tictactoepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\views\\gamepanels\\tictactoepanel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|d:\\\u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0432\u0447\u0443 \u0441#\\\u043F\u0440\u043E\u0435\u043A\u0442\u0438\\tic-tac-toe\\gamesapp\\gamesapp\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\controllers\\maincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|d:\\\u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0432\u0447\u0443 \u0441#\\\u043F\u0440\u043E\u0435\u043A\u0442\u0438\\tic-tac-toe\\gamesapp\\gamesapp\\views\\gamepanels\\minesweeperview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\views\\gamepanels\\minesweeperview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\gamesapp\\views\\mainmenuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\views\\mainmenuview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\gamesapp\\models\\minesweepermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\models\\minesweepermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|d:\\\u043D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0432\u0447\u0443 \u0441#\\\u043F\u0440\u043E\u0435\u043A\u0442\u0438\\tic-tac-toe\\gamesapp\\gamesapp\\controllers\\minesweepercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{292513A8-75E7-4532-BD5C-6AE3A681C31A}|GamesApp\\GamesApp.csproj|solutionrelative:gamesapp\\controllers\\minesweepercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,40 +39,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainModel.cs",
-              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\MainModel.cs",
-              "RelativeDocumentMoniker": "GamesApp\\Models\\MainModel.cs",
-              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\MainModel.cs",
-              "RelativeToolTip": "GamesApp\\Models\\MainModel.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAAAA0AAAA8AAAA",
+              "Title": "TicTacToePanel.cs",
+              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Views\\GamePanels\\TicTacToePanel.cs",
+              "RelativeDocumentMoniker": "GamesApp\\Views\\GamePanels\\TicTacToePanel.cs",
+              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Views\\GamePanels\\TicTacToePanel.cs",
+              "RelativeToolTip": "GamesApp\\Views\\GamePanels\\TicTacToePanel.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T16:29:54.5Z",
+              "WhenOpened": "2025-05-28T18:15:37.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainController.cs",
-              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Controllers\\MainController.cs",
-              "RelativeDocumentMoniker": "GamesApp\\Controllers\\MainController.cs",
-              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Controllers\\MainController.cs",
-              "RelativeToolTip": "GamesApp\\Controllers\\MainController.cs",
-              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCgAAAA7AAAA",
+              "Title": "MineSweeperView.cs",
+              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Views\\GamePanels\\MineSweeperView.cs",
+              "RelativeDocumentMoniker": "GamesApp\\Views\\GamePanels\\MineSweeperView.cs",
+              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Views\\GamePanels\\MineSweeperView.cs",
+              "RelativeToolTip": "GamesApp\\Views\\GamePanels\\MineSweeperView.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAowB4AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T16:13:46.046Z",
+              "WhenOpened": "2025-05-28T18:00:17.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MineSweeperControler.cs",
+              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Controllers\\MineSweeperControler.cs",
+              "RelativeDocumentMoniker": "GamesApp\\Controllers\\MineSweeperControler.cs",
+              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Controllers\\MineSweeperControler.cs",
+              "RelativeToolTip": "GamesApp\\Controllers\\MineSweeperControler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-28T17:54:58.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainMenuView.cs",
-              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Views\\MainMenuView.cs",
-              "RelativeDocumentMoniker": "GamesApp\\Views\\MainMenuView.cs",
-              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Views\\MainMenuView.cs",
-              "RelativeToolTip": "GamesApp\\Views\\MainMenuView.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAcwBgAAAAgAAAA",
+              "Title": "MinesweeperModel.cs",
+              "DocumentMoniker": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\MinesweeperModel.cs",
+              "RelativeDocumentMoniker": "GamesApp\\Models\\MinesweeperModel.cs",
+              "ToolTip": "D:\\\u041D\u0430\u0432\u0447\u0430\u043D\u043D\u044F\\\u0412\u0447\u0443 \u0421#\\\u041F\u0440\u043E\u0435\u043A\u0442\u0438\\Tic-Tac-Toe\\GamesApp\\GamesApp\\Models\\MinesweeperModel.cs",
+              "RelativeToolTip": "GamesApp\\Models\\MinesweeperModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T15:35:01.598Z",
+              "WhenOpened": "2025-05-26T09:09:01.514Z",
               "EditorCaption": ""
             }
           ]
