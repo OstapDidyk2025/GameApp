@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GamesApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+066ca577b50392f7af419d9f0a25cd01c9a5e873")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7425d25f275933ff0b8e4a304e3e5ecf4485cfbe")]
 [assembly: System.Reflection.AssemblyProductAttribute("GamesApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GamesApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

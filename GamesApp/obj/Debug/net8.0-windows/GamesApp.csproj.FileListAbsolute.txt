@@ -20,3 +20,4 @@ D:\Навчання\Вчу С#\Проекти\Tic-Tac-Toe\GamesApp\GamesApp\obj\
 D:\Навчання\Вчу С#\Проекти\Tic-Tac-Toe\GamesApp\GamesApp\obj\Debug\net8.0-windows\GamesApp.Views.GamePanels.SudokuView.resources
 D:\Навчання\Вчу С#\Проекти\Tic-Tac-Toe\GamesApp\GamesApp\obj\Debug\net8.0-windows\GamesApp.sourcelink.json
 D:\Навчання\Вчу С#\Проекти\Tic-Tac-Toe\GamesApp\GamesApp\obj\Debug\net8.0-windows\GamesApp.Views.GamePanels.MineSweeperView.resources
+D:\Навчання\Вчу С#\Проекти\Tic-Tac-Toe\GamesApp\GamesApp\obj\Debug\net8.0-windows\GamesApp.Properties.Resources.resources

@@ -23,15 +23,18 @@ namespace GamesApp
             int x = (cell.xCoordinate > 0) ? cell.xCoordinate - 1 : cell.xCoordinate;
             int y = (cell.yCoordinate > 0) ? cell.yCoordinate - 1 : cell.yCoordinate;
             int borderX = (cell.xCoordinate < board.GetLength(0)) ? cell.xCoordinate + 1 : cell.xCoordinate;
-            int borderY = (cell.yCoordinate < board.GetLength(1)) ? cell.xCoordinate + 1 : cell.xCoordinate;
+            int borderY = (cell.yCoordinate < board.GetLength(1)) ? cell.yCoordinate + 1 : cell.yCoordinate;
 
-            for (int i = x; i < borderX; i++)
+            for (int i = x; i <= borderX; i++)
             {
-                for (int j = y; j < borderY; j++)
+                for (int j = y; j <= borderY; j++)
                 {
-                    if (board[i,j].status == "safe")
+                    if (i >= 0 && i < board.GetLength(0) && j >= 0 && j < board.GetLength(1))
                     {
-                        cell.number++;
+                        if (board[i, j].status == "mine")
+                        {
+                            cell.number++;
+                        }
                     }
                 }
             }
@@ -42,6 +45,10 @@ namespace GamesApp
             if (number > 0)
             {
                 status = "number";
+            }
+            else
+            {
+                status = "safe";
             }
         }
     }
